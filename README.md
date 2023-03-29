@@ -12,8 +12,6 @@
 
 2. Import [hotel.sql](/hotel.sql) to import the database.
 
-    - [How to Import .sql file to Database](https://youtu.be/GHSis3KwnkM)
-
 3. Run the Program using [Project.java](/src/project/Project.java).
 
 
