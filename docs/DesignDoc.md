@@ -38,27 +38,58 @@ DBMS	Database Management System: A software system that allows users to define, 
 
 ## Requirements
 
-This section describes the features of the application.
+Online Room Booking with Real-Time Availability
+1.1. The system shall allow guests to search for room availability based on date, room type, and number of guests.
+1.2. The system shall display real-time room availability to guests.
+1.3. The system shall enable guests to book a room and provide necessary information, such as name, contact information, and payment details.
+1.4. The system shall send confirmation emails to guests upon successful booking.
 
-> _In this section you do not need to be exhaustive and list every
-> story.  Focus on top-level features from the Vision document and
-> maybe Epics and critical Stories._
+Guest Check-In and Check-Out Automation
+2.1. The system shall allow receptionists to check-in guests upon arrival by verifying their booking details and identification.
+2.2. The system shall enable receptionists to check-out guests upon departure, calculate the final bill, and process payments.
+2.3. The system shall update room availability status after guest check-in and check-out.
+
+Guest Profile Management
+3.1. The system shall store guest information, including personal details, contact information, and booking history.
+3.2. The system shall allow receptionists to search, view, and update guest profiles.
+3.3. The system shall allow guests to view and update their profiles through a secure online portal.
+
+Housekeeping Task Management
+4.1. The system shall automatically generate housekeeping tasks based on room status and guest needs.
+4.2. The system shall allow housekeeping staff to view, update, and complete assigned tasks.
+4.3. The system shall notify receptionists and housekeeping staff of urgent tasks or special requests.
+
+Reporting and Analytics
+5.1. The system shall provide an admin dashboard to display key performance indicators, such as occupancy rate, revenue, and average length of stay.
+5.2. The system shall generate customizable reports on booking, revenue, and guest data for specified date ranges.
+5.3. The system shall provide data visualization tools to help management analyze trends and make informed decisions.
+
+System Security and Data Privacy
+6.1. The system shall enforce secure user authentication and role-based access control.
+6.2. The system shall encrypt sensitive data, such as payment information and guest personal details.
+6.3. The system shall comply with relevant data privacy regulations and industry best practices for data storage and processing.
 
 ### Definition of MVP
-> _**[Sprint 2 & 4]** Provide a simple description of the Minimum Viable Product._
+The Minimum Viable Product (MVP) for the Hotel Management System is a functional and user-friendly platform that enables guests to book rooms online, while allowing hotel staff to manage guest check-ins, check-outs, guest profiles, and housekeeping tasks efficiently.
 
 ### MVP Features
->  _**[Sprint 4]** Provide a list of top-level Epics and/or Stories of the MVP._
+Online Room Booking with Real-Time Availability
+Guest Check-In and Check-Out Automation
+Guest Profile Management
+Housekeeping Task Management
 
 ### Enhancements
-> _**[Sprint 4]** Describe what enhancements you have implemented for the project._
+Reporting and Analytics: We have implemented an admin dashboard that displays key performance indicators, such as occupancy rate, revenue, and average length of stay, to help management make informed decisions. Additionally, the system can generate customizable reports and provide data visualization tools for better trend analysis.
+System Security and Data Privacy: We have enforced secure user authentication and role-based access control to protect sensitive information. Sensitive data, such as payment information and guest personal details, are encrypted to comply with relevant data privacy regulations and industry best practices for data storage and processing.
+Responsive User Interface: We have developed a responsive user interface that adapts to various screen sizes and devices, ensuring a seamless experience for guests and staff members across desktops, tablets, and mobile phones.
+Integration with External Services: The system can be integrated with popular payment gateways, email service providers, and other third-party services to streamline the booking process and improve overall efficiency.
 
 
 ## Application Domain
 
-This section describes the application domain.
+The Hotel Management System operates within the domain of the hospitality industry, specifically focused on hotels and their management processes. The primary goal of the system is to provide a seamless experience for both hotel guests and staff members by streamlining daily operations, such as room booking, guest check-in and check-out, and housekeeping task management.
 
-![Domain Model](domain-model-placeholder.png)
+![Domain Model](![classdia](https://user-images.githubusercontent.com/111943817/232650548-21adffb7-6b69-4190-9022-2e8055759282.jpg))
 
 > _**[Sprint 2 & 4]** Provide a high-level overview of the domain for this application. You
 > can discuss the more important domain entities and their relationship
