@@ -18,18 +18,29 @@ geometry: margin=1in
 
 ## Executive Summary
 
-This is a summary of the project.
+The Hotel Management System project aims to streamline and automate the daily operations of a hotel, ensuring a seamless experience for both guests and hotel staff. This comprehensive software solution caters to the needs of various user groups, including hotel guests, receptionists, housekeeping staff, and hotel managers. By addressing essential functionalities such as room booking, check-in/check-out processes, guest profile management, and housekeeping task management, this system will enhance the overall efficiency of the hotel operations and improve customer satisfaction.
 
 ### Purpose
->  _**[Sprint 2 & 4]** Provide a very brief statement about the project and the most
-> important user group and user goals._
+The primary purpose of the Hotel Management System is to simplify and automate hotel management processes for the primary user groups, including hotel guests and hotel staff (receptionists, housekeeping staff, and hotel managers). Key user goals include enabling guests to easily book rooms, manage their profiles, and check-in/check-out, while empowering hotel staff to efficiently manage room availability, guest information, and housekeeping tasks.
 
 ### Glossary and Acronyms
-> _**[Sprint 2 & 4]** Provide a table of terms and acronyms._
+Term
+Definition
+SPA
+Single Page Application: A web application or website that dynamically updates a single HTML page as the user interacts with the app, improving user experience and reducing page load times.
+HMS
+Hotel Management System: A software solution designed to manage and automate hotel operations, including room booking, guest management, and housekeeping tasks.
+API
+Application Programming Interface: A set of rules, protocols, and tools for building software applications that enable communication between different software components.
+GUI
+Graphical User Interface: A visual representation of a software application that allows users to interact with the system using graphical elements such as buttons, icons, and windows.
+CRUD
+Create, Read, Update, and Delete: A set of common operations performed on data in a database, often used as a shorthand for the basic functionalities of a data-driven application.
+DBMS
+Database Management System: A software system that allows users to define, create, maintain, and control access to a database, enabling efficient data storage and retrieval.
 
-| Term | Definition |
-|------|------------|
-| SPA | Single Page |
+
+
 
 
 ## Requirements
