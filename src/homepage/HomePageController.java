@@ -3,9 +3,6 @@ package homepage;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDecorator;
 import hotel.Room;
-import java.net.URL;
-import java.util.List;
-import java.util.ResourceBundle;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,16 +12,20 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
-import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressIndicator;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import static login.LoginController.decorator;
-import static login.LoginController.window;
 import project.DataBase;
 import project.Paths;
 import project.switchScreen;
+
+import java.net.URL;
+import java.util.List;
+import java.util.ResourceBundle;
+
+import static login.LoginController.decorator;
+import static login.LoginController.window;
 
 /**
  * FXML Controller class

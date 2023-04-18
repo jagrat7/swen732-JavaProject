@@ -19,6 +19,14 @@
       <root url="jar://$PROJECT_DIR$/lib/hibernate4-support/mchange-commons-java-0.2.3.4.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../Program Files/Java/javafx-sdk-20/javafx.base" />
+      <root url="file://$PROJECT_DIR$/../Program Files/Java/javafx-sdk-20/javafx.controls" />
+      <root url="file://$PROJECT_DIR$/../Program Files/Java/javafx-sdk-20/javafx.fxml" />
+      <root url="file://$PROJECT_DIR$/../Program Files/Java/javafx-sdk-20/javafx.graphics" />
+      <root url="file://$PROJECT_DIR$/../Program Files/Java/javafx-sdk-20/javafx.media" />
+      <root url="file://$PROJECT_DIR$/../Program Files/Java/javafx-sdk-20/javafx.swing" />
+      <root url="file://$PROJECT_DIR$/../Program Files/Java/javafx-sdk-20/javafx.web" />
+    </SOURCES>
   </library>
 </component>
