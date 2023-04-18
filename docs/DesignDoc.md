@@ -91,92 +91,172 @@ The Hotel Management System operates within the domain of the hospitality indust
 
 ![Domain Model](D:\classdia.jpg)
 
-> _**[Sprint 2 & 4]** Provide a high-level overview of the domain for this application. You
-> can discuss the more important domain entities and their relationship
-> to each other._
+The domain model for the Hotel Management System consists of several key entities and their relationships, which are outlined below:
+
+Guest: Represents a person who books a room in the hotel. The guest has attributes such as name, contact information, and payment details.
+
+Room: Represents a hotel room available for booking. A room has attributes like room number, room type, capacity, and status (available, booked, or unavailable).
+
+Booking: Represents a reservation made by a guest. A booking has attributes such as booking ID, guest details, room details, check-in and check-out dates, and payment status.
+
+Receptionist: Represents a hotel staff member responsible for managing guest check-ins and check-outs. A receptionist has attributes like name, employee ID, and contact information.
+
+Housekeeper: Represents a hotel staff member responsible for maintaining the cleanliness and orderliness of hotel rooms. A housekeeper has attributes like name, employee ID, and contact information.
+
+Housekeeping Task: Represents a specific cleaning or maintenance task assigned to a housekeeper. A housekeeping task has attributes like task ID, room number, task description, and task status (completed or pending).
+
+Report: Represents a collection of data and statistics related to hotel operations, such as occupancy rate, revenue, and average length of stay. A report has attributes like report ID, report type, and time range.
+
+These entities interact with each other to form the core functionality of the Hotel Management System. For example, a guest books a room, which creates a booking record associated with the guest and the room. The receptionist checks in the guest upon arrival and checks them out upon departure. The housekeeper receives housekeeping tasks to maintain the cleanliness of rooms, and the management can access reports to analyze hotel performance and make data-driven decisions.
 
 
 ## Architecture and Design
 
-This section describes the application architecture.
+This section describes the application architecture for the Hotel Management System.
 
 ### Summary
 
-The following Tiers/Layers model shows a high-level view of the webapp's architecture.
+The Hotel Management System is designed using a three-tier architecture, which consists of the presentation, business logic, and data storage layers. This architecture allows for the separation of concerns, making the system more modular, maintainable, and scalable.
 
-![The Tiers & Layers of the Architecture](architecture-tiers-and-layers.png)
+Presentation Layer
+The presentation layer is responsible for providing a user interface (UI) through which hotel guests and staff can interact with the system. This layer is developed using modern web technologies such as HTML, CSS, and JavaScript, along with frameworks like Bootstrap and Vue.js for responsive design and interactivity. The UI is designed to be user-friendly and intuitive, catering to the needs of various user groups, including guests, receptionists, housekeepers, and hotel management.
 
-The e-store web application, is built using the Model–View–ViewModel (MVVM) architecture pattern. 
+Business Logic Layer
+The business logic layer is responsible for implementing the core functionality of the Hotel Management System, such as room booking, guest management, housekeeping task management, and reporting. This layer is developed using Java and follows the principles of object-oriented programming (OOP) to ensure a clean and modular design. Key classes and their relationships are modeled based on the domain model described in the Application Domain section.
 
-The Model stores the application data objects including any functionality to provide persistance. 
+The business logic layer also includes a set of application programming interfaces (APIs) that expose its functionality to the presentation layer. This allows for a clear separation between the UI and the underlying business logic, making the system easier to maintain and extend in the future.
 
-The View is the client-side SPA built with Angular utilizing HTML, CSS and TypeScript. The ViewModel provides RESTful APIs to the client (View) as well as any logic required to manipulate the data objects from the Model.
+Data Storage Layer
+The data storage layer is responsible for persisting the system's data, such as guest information, room bookings, and housekeeping tasks. This layer uses a relational database management system (RDBMS) such as MySQL or PostgreSQL to store the data in a structured and efficient manner. The database schema is designed to ensure data consistency, integrity, and ease of querying.
 
-Both the ViewModel and Model are built using Java and Spring Framework. Details of the components within these tiers are supplied below.
+The business logic layer communicates with the data storage layer using a data access object (DAO) pattern, which abstracts the underlying database operations and allows for easy swapping of the data storage technology if needed in the future.
 
+By utilizing a three-tier architecture, the Hotel Management System achieves a high degree of modularity, maintainability, and scalability, ensuring the system can easily adapt to the changing needs of the hotel industry.
 
 ### Overview of User Interface
 
-This section describes the web interface flow; this is how the user views and interacts
-with the e-store application.
-
-> _Provide a summary of the application's user interface.  Describe, from
-> the user's perspective, the flow of the pages in the web application._
+This section describes the web interface flow of the Hotel Management System. From the user's perspective, the flow of the pages in the web application is designed to be intuitive and user-friendly, catering to the needs of various user groups, including guests, receptionists, housekeepers, and hotel management.
 
 
 ### View Tier
-> _**[Sprint 4]** Provide a summary of the View Tier UI of your architecture.
-> Describe the types of components in the tier and describe their
-> responsibilities.  This should be a narrative description, i.e. it has
-> a flow or "story line" that the reader can follow._
+The View Tier of the Hotel Management System consists of several web pages and components, each designed to provide specific functionality for the users. The responsibilities of the components in this tier include displaying relevant data, accepting user inputs, and interacting with the ViewModel Tier to perform various operations.
 
-> _**[Sprint 4]** You must  provide at least **2 sequence diagrams** as is relevant to a particular aspects 
-> of the design that you are describing.  For example, in e-store you might create a 
-> sequence diagram of a customer searching for an item and adding to their cart. 
-> As these can span multiple tiers, be sure to include an relevant HTTP requests from the client-side to the server-side 
-> to help illustrate the end-to-end flow._
+For example, the user interface includes pages for room booking, guest profile management, check-in/check-out processes, housekeeping task management, and reporting. Each page contains interactive components, such as forms, buttons, and tables, to facilitate smooth navigation and operation.
 
-> _**[Sprint 4]** To adequately show your system, you will need to present the **class diagrams** where relevant in your design. Some additional tips:_
- >* _Class diagrams only apply to the **ViewModel** and **Model** Tier_
->* _A single class diagram of the overall system will not be effective. Consider breaking down into smaller sections._
- >* _Correct labeling of relationships with proper notation for the relationship type, multiplicities, and navigation information will be important._
- >* _Include other details such as attributes and method signatures that you think are needed to support the level of detail in your discussion._
+Sequence Diagrams
+Room Booking:
+This sequence diagram illustrates the flow of events when a guest books a room.
 
+Room Booking Sequence Diagram
+
+Check-in Process:
+This sequence diagram demonstrates the flow of events when a receptionist checks a guest into their room.
+
+Check-in Sequence Diagram
+
+Class Diagrams
+Room Booking and Guest Profile Management:
+This class diagram shows the classes and relationships related to room booking and guest profile management.
+
+Room Booking and Guest Profile Management Class Diagram
+
+Housekeeping Task Management and Reporting:
+This class diagram displays the classes and relationships involved in housekeeping task management and reporting.
+
+Housekeeping Task Management and Reporting Class Diagram
 ### ViewModel Tier
-> _**[Sprint 4]** Provide a summary of this tier of your architecture. This
-> section will follow the same instructions that are given for the View
-> Tier above._
+The ViewModel Tier of the Hotel Management System is responsible for handling the application's logic and communication between the View Tier and the Model Tier. This tier includes several classes, each designed to manage specific functionality related to the user interface components.
 
-> _At appropriate places as part of this narrative provide one or more
-> static models (UML class diagrams) with some details such as critical attributes and methods._
+At the core of the ViewModel Tier are the ViewModel classes, which encapsulate the data and operations required for each user interface component. These ViewModel classes interact with the Model Tier to retrieve and update data and perform various business logic operations.
 
+For example, the RoomBookingViewModel class manages the room booking process by handling user inputs, interacting with the RoomManager and BookingManager classes in the Model Tier, and updating the View Tier with the necessary information.
+
+As part of this narrative, the following class diagram illustrates the relationships between the ViewModel classes and the Model classes:
+
+ViewModel Tier Class Diagram
 
 ### Model Tier
-> _**[Sprint 2..4]** Provide a summary of this tier of your architecture. This
-> section will follow the same instructions that are given for the View
-> Tier above._
+The Model Tier of the Hotel Management System is responsible for managing the data and business logic of the application. This tier consists of several classes, each representing a specific entity or functionality within the hotel management domain.
 
-> _At appropriate places as part of this narrative provide one or more
-> static models (UML class diagrams) with some details such as critical attributes and methods._
+At the core of the Model Tier are the domain classes, such as Room, Guest, Booking, HousekeepingTask, and Report. These classes encapsulate the data and the relationships between the entities, as well as the business rules and constraints associated with them.
 
+In addition to the domain classes, the Model Tier also includes manager classes, such as RoomManager, GuestManager, BookingManager, HousekeepingManager, and ReportManager. These manager classes are responsible for managing the lifecycle and operations of their respective domain classes, interacting with the data storage and retrieval mechanisms, and enforcing business rules and constraints.
+
+For example, the RoomManager class is responsible for managing the availability and assignment of rooms within the hotel. It interacts with the Room class to enforce constraints such as room capacity and room type, and it communicates with the data storage mechanism to store and retrieve room information.
+
+As part of this narrative, the following class diagram illustrates the relationships between the Model classes:
+
+Model Tier Class Diagram
+
+### Deployment and Scalability
+The Hotel Management System is designed to be deployed on a web server, allowing users to access the application through their web browsers. The system can be deployed on a cloud-based platform, such as AWS or Azure, which provides the flexibility to scale the system resources based on the demand and usage patterns.
+
+The application architecture follows a multi-tier design, separating the concerns of user interface, application logic, and data management. This separation allows the system to scale horizontally by adding more instances of the web server and database server as needed. Additionally, the use of caching and load balancing techniques can further improve the system's performance and scalability.
+
+To ensure the system's security, the Hotel Management System uses secure communication protocols, such as HTTPS, and implements role-based access control to restrict access to sensitive information and operations. The system also employs best practices for secure data storage and handling, including encryption and hashing of sensitive data.
+
+In conclusion, the Hotel Management System is designed with scalability, performance, and security in mind, ensuring a smooth and reliable experience for its users while accommodating the growth and changing needs of the hotel business.
 ### Static Code Analysis/Design Improvements
-> _**[Sprint 4]** Discuss the quality of your **current** design along with recommending **future** refactoring and other design improvements based on your analysis and review of the design against the object-oriented design principles covered in class._
+Static code analysis is a crucial part of the software development process, as it helps identify potential issues and vulnerabilities in the codebase. It involves analyzing the source code without executing the program, thus allowing developers to detect issues early in the development cycle. This section will discuss the importance of static code analysis and how it can lead to design improvements in the Hotel Management System.
 
-> _**[Sprint 4]** With the results from the Static Code Analysis exercise, 
-> **Identify 3-4** areas within your code that have been flagged by the Static Code 
-> Analysis Tool (SonarQube) and provide your analysis and recommendations.  
-> Include any relevant screenshot(s) with each area_
+Importance of Static Code Analysis
+Detect potential bugs and vulnerabilities: Static code analysis tools can identify problematic code patterns, security vulnerabilities, and other issues that could lead to runtime errors or security breaches. By addressing these issues early, developers can prevent bugs from reaching the production environment, thus reducing the risk of costly incidents and system downtime.
+
+Improve code quality and maintainability: Static analysis helps enforce coding standards and best practices, ensuring that the codebase is consistent, clean, and easy to understand. This, in turn, leads to increased maintainability and a smoother development process.
+
+Enhance code performance: Some static analysis tools can identify performance bottlenecks or suboptimal code structures, allowing developers to optimize their code for better performance and resource utilization.
+
+Facilitate code reviews: Integrating static code analysis into the development process can make code reviews more effective by automatically flagging potential issues, allowing reviewers to focus on the overall design and architecture.
+
+Design Improvements in the Hotel Management System
+By incorporating static code analysis into the development process, the following design improvements can be made to the Hotel Management System:
+
+Refactor code for better modularity and cohesion: Analyzing the codebase can help identify areas where classes or methods are too large or have too many responsibilities. By breaking down these components into smaller, more focused units, the system's overall design becomes more modular and easier to maintain.
+
+Optimize data structures and algorithms: Static analysis can reveal opportunities to use more efficient data structures or algorithms, leading to improved performance and reduced resource usage.
+
+Eliminate code duplication: Detecting and removing duplicated code helps to reduce the overall size of the codebase and minimize the risk of introducing inconsistencies or bugs during maintenance.
+
+Improve exception handling: Proper exception handling is critical for a robust application. Static analysis can identify areas where exceptions are not handled correctly, allowing developers to implement more robust error handling and recovery mechanisms.
+
+Enhance security: By detecting potential security vulnerabilities, such as SQL injection or cross-site scripting (XSS) attacks, developers can take the necessary steps to harden the application and protect sensitive data.
 
 ## Testing
 > _This section will provide information about the testing performed
 > and the results of the testing._
 
 ### Acceptance Testing
-> _**[Sprint 2 & 4]** Report on the number of user stories that have passed all their
-> acceptance criteria tests, the number that have some acceptance
-> criteria tests failing, and the number of user stories that
-> have not had any testing yet. Highlight the issues found during
-> acceptance testing and if there are any concerns._
+Acceptance testing is a crucial phase in the software development lifecycle, as it ensures that the developed system meets the specified requirements and satisfies the needs of the users. In the context of the Hotel Management System, acceptance testing involves verifying the functionality, usability, and reliability of the system from the perspective of the end-users, such as hotel staff and guests. This section will outline the process of acceptance testing for the Hotel Management System.
+
+Overview of Acceptance Testing Process
+Define acceptance criteria: The first step in the acceptance testing process is to establish a set of clear and measurable criteria that the system must meet to be considered acceptable. These criteria should be based on the system requirements and user stories defined during the requirements gathering phase.
+
+Develop test cases and scenarios: Based on the acceptance criteria, create a comprehensive set of test cases and scenarios that cover all the major functionalities of the system. These test cases should be designed to mimic real-world usage scenarios and verify that the system behaves as expected under various conditions.
+
+Prepare test data and environment: Set up a test environment that closely resembles the production environment in which the system will be deployed. This includes configuring hardware, software, and network components, as well as preparing realistic test data to be used during the testing process.
+
+Execute test cases: Execute the defined test cases and scenarios, documenting the results and any issues encountered during the testing process. This may involve manual testing, automated testing, or a combination of both, depending on the complexity of the system and the resources available.
+
+Evaluate test results and identify issues: Analyze the test results to determine whether the system meets the defined acceptance criteria. If any issues are found, report them to the development team for resolution.
+
+Retest and verify fixes: Once issues have been addressed, retest the system to ensure that the fixes have been implemented correctly and that no new issues have been introduced.
+
+Obtain stakeholder approval: Upon successful completion of the acceptance testing process, present the test results to the stakeholders for review and approval. If the system is deemed acceptable, it can be moved into the deployment phase.
+
+Sample Acceptance Test Cases for Hotel Management System
+Here are some example test cases that can be used as a starting point for acceptance testing of the Hotel Management System:
+
+Verify that a user can create a new room with valid information (room number, room type, and room rate).
+Verify that a user cannot create a room with duplicate room numbers or invalid information.
+Verify that a user can view the list of all rooms and filter them by room type or availability.
+Verify that a user can create a new guest profile with valid information (name, contact details, and identification).
+Verify that a user can search for a guest by name or identification and view their profile.
+Verify that a user can create a new booking with valid information (room, guest, check-in and check-out dates, and payment details).
+Verify that a user cannot create a booking with conflicting dates or invalid information.
+Verify that a user can check-in a guest with a valid booking and update the room's availability status.
+Verify that a user can check-out a guest, calculate the total charges, and update the room's availability status.
+Verify that a user can create, assign, and manage housekeeping tasks for rooms.
+Verify that a user can generate reports on room occupancy, revenue, and housekeeping performance.
 
 ### Unit Testing and Code Coverage
 > _**[Sprint 4]** Discuss your unit testing strategy. Report on the code coverage
