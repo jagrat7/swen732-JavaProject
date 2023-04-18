@@ -9,12 +9,12 @@ geometry: margin=1in
 > and appear in the generated PDF in italics._
 
 ## Team Information
-* Team name: TEAMNAME
+* Team name: HOTEL MANAGEMENT SYSTEM
 * Team members
-  * MEMBER1
-  * MEMBER2
-  * MEMBER3
-  * MEMBER4
+* AVINASH AMUDALA
+* GALEKWAN SANGO
+* JAGRAT RAO
+* SUSHANTH NAYAK
 
 ## Executive Summary
 
