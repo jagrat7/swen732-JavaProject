@@ -89,7 +89,7 @@ Integration with External Services: The system can be integrated with popular pa
 
 The Hotel Management System operates within the domain of the hospitality industry, specifically focused on hotels and their management processes. The primary goal of the system is to provide a seamless experience for both hotel guests and staff members by streamlining daily operations, such as room booking, guest check-in and check-out, and housekeeping task management.
 
-![Domain Model](![classdia](https://user-images.githubusercontent.com/111943817/232650548-21adffb7-6b69-4190-9022-2e8055759282.jpg))
+![Domain Model](https://drive.google.com/file/d/1Dp7cwneJTuOl4saS2gqwbuQXtH12Za_u/view?usp=share_link)
 
 > _**[Sprint 2 & 4]** Provide a high-level overview of the domain for this application. You
 > can discuss the more important domain entities and their relationship
