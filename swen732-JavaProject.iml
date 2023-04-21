@@ -1,18 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
-  <component name="FacetManager">
-    <facet type="hibernate" name="Hibernate">
-      <configuration>
-        <datasource-map>
-          <unit-entry name="build:classes:hibernate.cfg.xml" value="fe26175b-aab9-4760-80e5-2bd83f9ebc6f" />
-          <unit-entry name="hibernate.cfg.xml" value="c30a329f-b8c0-4304-b553-cb96ef2393fc" />
-        </datasource-map>
-        <naming-strategy-map />
-        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/build/classes/hibernate.cfg.xml" />
-        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/hibernate.cfg.xml" />
-      </configuration>
-    </facet>
-  </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
@@ -20,10 +7,5 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="lib1" level="project" />
-    <orderEntry type="library" name="hibernate4-support" level="project" />
-    <orderEntry type="library" name="lib" level="project" />
-    <orderEntry type="library" name="jpa2-persistence" level="project" />
-    <orderEntry type="library" name="lib2" level="project" />
   </component>
 </module>
