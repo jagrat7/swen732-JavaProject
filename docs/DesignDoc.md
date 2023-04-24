@@ -9,12 +9,14 @@ geometry: margin=1in
 > and appear in the generated PDF in italics._
 
 ## Team Information
-* Team name: HOTEL MANAGEMENT SYSTEM
-* Team members
-* AVINASH AMUDALA
-* GALEKWAN SANGO
-* JAGRAT RAO
-* SUSHANTH NAYAK
+* Team name: Hotel Management System
+
+* Team members:
+  * Avinash Amudala
+  * Galekwan Sango
+  * Sushanth Nayak
+  * Jagrat Rao
+
 
 ## Executive Summary
 
@@ -133,60 +135,48 @@ The business logic layer communicates with the data storage layer using a data a
 
 By utilizing a three-tier architecture, the Hotel Management System achieves a high degree of modularity, maintainability, and scalability, ensuring the system can easily adapt to the changing needs of the hotel industry.
 
-### Overview of User Interface
+## Overview of User Interface
 
 This section describes the web interface flow of the Hotel Management System. From the user's perspective, the flow of the pages in the web application is designed to be intuitive and user-friendly, catering to the needs of various user groups, including guests, receptionists, housekeepers, and hotel management.
 
 
-### View Tier
-The View Tier of the Hotel Management System consists of several web pages and components, each designed to provide specific functionality for the users. The responsibilities of the components in this tier include displaying relevant data, accepting user inputs, and interacting with the ViewModel Tier to perform various operations.
+### Model:
+The Model layer consists of classes that represent the business entities and the business logic of the application. For the hotel management system, the Model includes the following classes:
 
-For example, the user interface includes pages for room booking, guest profile management, check-in/check-out processes, housekeeping task management, and reporting. Each page contains interactive components, such as forms, buttons, and tables, to facilitate smooth navigation and operation.
+Holder: This class holds the data structures representing the different types of rooms (luxury double rooms, deluxe double rooms, luxury single rooms, and deluxe single rooms) and their availability.
+Customer: This class represents a customer who books a room, and it contains customer details such as name, contact information, and food orders.
+Food: This class represents a food item that a customer can order. It contains properties such as the food's name, price, and quantity.
+The Model layer is also responsible for implementing the business rules and operations related to hotel room booking, food ordering, and room checkout. These operations can be implemented as methods within the corresponding classes or as separate classes or services.
 
-Sequence Diagrams
-Room Booking:
-This sequence diagram illustrates the flow of events when a guest books a room.
+### View:
+The View layer is responsible for displaying the data from the Model and capturing user input. In the hotel management system, the View can be a graphical user interface (GUI) or a command-line interface (CLI). The View layer consists of components like:
 
-Room Booking Sequence Diagram
+Room Details: Displays the features and pricing of the different types of rooms.
+Room Availability: Shows the availability status of each room type.
+Booking Form: Allows users to book a room by entering their personal information and selecting a room type.
+Food Ordering Form: Enables customers to order food items from the available menu.
+Checkout Form: Handles the room checkout process, including calculating the final bill and deallocating the room.
+### ViewModel:
+The ViewModel layer acts as the intermediary between the View and the Model. It exposes the data and commands that the View needs to interact with the Model. The ViewModel contains properties and methods that represent the available actions and data required by the View. In the hotel management system, the ViewModel can include properties and methods like:
 
-Check-in Process:
-This sequence diagram demonstrates the flow of events when a receptionist checks a guest into their room.
+DisplayRoomDetailsCommand: Displays room details based on the selected room type.
+DisplayRoomAvailabilityCommand: Shows room availability for each room type.
+BookRoomCommand: Books a room by creating a new Customer object and updating the corresponding room's availability in the Holder class.
+OrderFoodCommand: Allows customers to order food items by updating their food orders in the Customer class.
+CheckoutCommand: Processes the room checkout, including calculating the final bill, deallocating the room, and updating the room's availability in the Holder class.
+The ViewModel interacts with the HotelManagement class (or another coordinating class or service), which is responsible for orchestrating the actions and updates between the Model and the ViewModel.
 
-Check-in Sequence Diagram
+By following the MVVM architecture, the hotel management system achieves a clear separation of concerns between the data and business logic (Model), the user interface (View), and the coordination and communication between the Model and the View (ViewModel). This separation makes the system more maintainable, scalable, and testable. It also helps to simplify the development process and improve the overall structure of the application.
 
-Class Diagrams
-Room Booking and Guest Profile Management:
-This class diagram shows the classes and relationships related to room booking and guest profile management.
+In the context of the hotel management system, the ViewModel will contain properties and commands that represent the available actions (display room details, display room availability, book a room, order food, and check out). The ViewModel will interact with the HotelManagement class, which serves as the primary coordinator for the system, to perform the required actions.
 
-Room Booking and Guest Profile Management Class Diagram
+Here's how the MVVM pattern would be applied to the hotel management system:
 
-Housekeeping Task Management and Reporting:
-This class diagram displays the classes and relationships involved in housekeeping task management and reporting.
-
-Housekeeping Task Management and Reporting Class Diagram
-### ViewModel Tier
-The ViewModel Tier of the Hotel Management System is responsible for handling the application's logic and communication between the View Tier and the Model Tier. This tier includes several classes, each designed to manage specific functionality related to the user interface components.
-
-At the core of the ViewModel Tier are the ViewModel classes, which encapsulate the data and operations required for each user interface component. These ViewModel classes interact with the Model Tier to retrieve and update data and perform various business logic operations.
-
-For example, the RoomBookingViewModel class manages the room booking process by handling user inputs, interacting with the RoomManager and BookingManager classes in the Model Tier, and updating the View Tier with the necessary information.
-
-As part of this narrative, the following class diagram illustrates the relationships between the ViewModel classes and the Model classes:
-
-ViewModel Tier Class Diagram
-
-### Model Tier
-The Model Tier of the Hotel Management System is responsible for managing the data and business logic of the application. This tier consists of several classes, each representing a specific entity or functionality within the hotel management domain.
-
-At the core of the Model Tier are the domain classes, such as Room, Guest, Booking, HousekeepingTask, and Report. These classes encapsulate the data and the relationships between the entities, as well as the business rules and constraints associated with them.
-
-In addition to the domain classes, the Model Tier also includes manager classes, such as RoomManager, GuestManager, BookingManager, HousekeepingManager, and ReportManager. These manager classes are responsible for managing the lifecycle and operations of their respective domain classes, interacting with the data storage and retrieval mechanisms, and enforcing business rules and constraints.
-
-For example, the RoomManager class is responsible for managing the availability and assignment of rooms within the hotel. It interacts with the Room class to enforce constraints such as room capacity and room type, and it communicates with the data storage mechanism to store and retrieve room information.
-
-As part of this narrative, the following class diagram illustrates the relationships between the Model classes:
-
-Model Tier Class Diagram
+The user interacts with the View by selecting an action or entering data.
+The View communicates the user's input to the ViewModel, which processes the input and updates the Model (Holder, Customer, and Food classes) accordingly.
+The ViewModel listens for changes in the Model and updates the View to display the results of the user's actions.
+The View displays the updated information to the user.
+By using the MVVM pattern, you can separate the concerns of the data, user interface, and application logic, making the system more maintainable and testable. For client-side applications or frameworks that support the MVVM pattern, this architecture can simplify the development process and improve the overall structure of the application.
 
 ### Deployment and Scalability
 The Hotel Management System is designed to be deployed on a web server, allowing users to access the application through their web browsers. The system can be deployed on a cloud-based platform, such as AWS or Azure, which provides the flexibility to scale the system resources based on the demand and usage patterns.
@@ -258,11 +248,3 @@ Verify that a user can check-out a guest, calculate the total charges, and updat
 Verify that a user can create, assign, and manage housekeeping tasks for rooms.
 Verify that a user can generate reports on room occupancy, revenue, and housekeeping performance.
 
-### Unit Testing and Code Coverage
-> _**[Sprint 4]** Discuss your unit testing strategy. Report on the code coverage
-> achieved from unit testing of the code base. Discuss the team's
-> coverage targets, why you selected those values, and how well your
-> code coverage met your targets._
-
->_**[Sprint 2 & 4]** **Include images of your code coverage report.** If there are any anomalies, discuss
-> those._
