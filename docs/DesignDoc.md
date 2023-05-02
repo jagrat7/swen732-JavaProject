@@ -1,12 +1,8 @@
 ---
 geometry: margin=1in
 ---
-# PROJECT Design Documentation
-
-> _The following template provides the headings for your Design
-> Documentation.  As you edit each section make sure you remove these
-> commentary 'blockquotes'; the lines that start with a > character
-> and appear in the generated PDF in italics._
+# ClassiqueHotelier: Hotel Management System 
+## Project Design Documentation
 
 ## Team Information
 * Team name: Hotel Management System
@@ -26,13 +22,14 @@ The Hotel Management System project aims to streamline and automate the daily op
 The primary purpose of the Hotel Management System is to simplify and automate hotel management processes for the primary user groups, including hotel guests and hotel staff (receptionists, housekeeping staff, and hotel managers). Key user goals include enabling guests to easily book rooms, manage their profiles, and check-in/check-out, while empowering hotel staff to efficiently manage room availability, guest information, and housekeeping tasks.
 
 ### Glossary and Acronyms
-Term	Definition
-SPA	Single Page Application: A web application or website that dynamically updates a single HTML page as the user interacts with the app, improving user experience and reducing page load times.
-HMS	Hotel Management System: A software solution designed to manage and automate hotel operations, including room booking, guest management, and housekeeping tasks.
-API	Application Programming Interface: A set of rules, protocols, and tools for building software applications that enable communication between different software components.
-GUI	Graphical User Interface: A visual representation of a software application that allows users to interact with the system using graphical elements such as buttons, icons, and windows.
-CRUD	Create, Read, Update, and Delete: A set of common operations performed on data in a database, often used as a shorthand for the basic functionalities of a data-driven application.
-DBMS	Database Management System: A software system that allows users to define, create, maintain, and control access to a database, enabling efficient data storage and retrieval.
+| Term   | Definition                                                                                                                                                                                                                                                                              |
+|--------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| SPA    | Single Page Application: A web application or website that dynamically updates a single HTML page as the user interacts with the app, improving user experience and reducing page load times.                                                                                       |
+| HMS    | Hotel Management System: A software solution designed to manage and automate hotel operations, including room booking, guest management, and housekeeping tasks.                                                                                                                     |
+| API    | Application Programming Interface: A set of rules, protocols, and tools for building software applications that enable communication between different software components.                                                                                                           |
+| GUI    | Graphical User Interface: A visual representation of a software application that allows users to interact with the system using graphical elements such as buttons, icons, and windows.                                                                                             |
+| CRUD   | Create, Read, Update, and Delete: A set of common operations performed on data in a database, often used as a shorthand for the basic functionalities of a data-driven application.                                                                                                  |
+| DBMS   | Database Management System: A software system that allows users to define, create, maintain, and control access to a database, enabling efficient data storage and retrieval.                                                                                                        |
 
 
 
@@ -41,7 +38,7 @@ DBMS	Database Management System: A software system that allows users to define, 
 ## Requirements
 
 Online Room Booking with Real-Time Availability
-1.1. The system shall allow guests to search for room availability based on date, room type, and number of guests.
+*  1.1. The system shall allow guests to search for room availability based on date, room type, and number of guests.
 1.2. The system shall display real-time room availability to guests.
 1.3. The system shall enable guests to book a room and provide necessary information, such as name, contact information, and payment details.
 1.4. The system shall send confirmation emails to guests upon successful booking.
@@ -88,10 +85,8 @@ Integration with External Services: The system can be integrated with popular pa
 
 
 ## Application Domain
-
+![](../../Users/Avinash/Downloads/WhatsApp Image 2023-04-26 at 9.30.05 PM.jpeg)
 The Hotel Management System operates within the domain of the hospitality industry, specifically focused on hotels and their management processes. The primary goal of the system is to provide a seamless experience for both hotel guests and staff members by streamlining daily operations, such as room booking, guest check-in and check-out, and housekeeping task management.
-
-![Domain Model](D:\classdia.jpg)
 
 The domain model for the Hotel Management System consists of several key entities and their relationships, which are outlined below:
 
@@ -177,7 +172,7 @@ The View communicates the user's input to the ViewModel, which processes the inp
 The ViewModel listens for changes in the Model and updates the View to display the results of the user's actions.
 The View displays the updated information to the user.
 By using the MVVM pattern, you can separate the concerns of the data, user interface, and application logic, making the system more maintainable and testable. For client-side applications or frameworks that support the MVVM pattern, this architecture can simplify the development process and improve the overall structure of the application.
-
+![](D:/Room_Booking_sequence-swen32.png)
 ### Deployment and Scalability
 The Hotel Management System is designed to be deployed on a web server, allowing users to access the application through their web browsers. The system can be deployed on a cloud-based platform, such as AWS or Azure, which provides the flexibility to scale the system resources based on the demand and usage patterns.
 
@@ -186,9 +181,10 @@ The application architecture follows a multi-tier design, separating the concern
 To ensure the system's security, the Hotel Management System uses secure communication protocols, such as HTTPS, and implements role-based access control to restrict access to sensitive information and operations. The system also employs best practices for secure data storage and handling, including encryption and hashing of sensitive data.
 
 In conclusion, the Hotel Management System is designed with scalability, performance, and security in mind, ensuring a smooth and reliable experience for its users while accommodating the growth and changing needs of the hotel business.
+![](../../Users/Avinash/Downloads/WhatsApp Image 2023-04-26 at 9.29.49 PM.jpeg)
 ### Static Code Analysis/Design Improvements
 Static code analysis is a crucial part of the software development process, as it helps identify potential issues and vulnerabilities in the codebase. It involves analyzing the source code without executing the program, thus allowing developers to detect issues early in the development cycle. This section will discuss the importance of static code analysis and how it can lead to design improvements in the Hotel Management System.
-
+![](../../Users/Avinash/Downloads/WhatsApp Image 2023-04-26 at 9.30.00 PM.jpeg)
 Importance of Static Code Analysis
 Detect potential bugs and vulnerabilities: Static code analysis tools can identify problematic code patterns, security vulnerabilities, and other issues that could lead to runtime errors or security breaches. By addressing these issues early, developers can prevent bugs from reaching the production environment, thus reducing the risk of costly incidents and system downtime.
 
@@ -197,7 +193,7 @@ Improve code quality and maintainability: Static analysis helps enforce coding s
 Enhance code performance: Some static analysis tools can identify performance bottlenecks or suboptimal code structures, allowing developers to optimize their code for better performance and resource utilization.
 
 Facilitate code reviews: Integrating static code analysis into the development process can make code reviews more effective by automatically flagging potential issues, allowing reviewers to focus on the overall design and architecture.
-
+![](../../Users/Avinash/Downloads/WhatsApp Image 2023-04-26 at 9.29.42 PM.jpeg)
 Design Improvements in the Hotel Management System
 By incorporating static code analysis into the development process, the following design improvements can be made to the Hotel Management System:
 
@@ -210,10 +206,6 @@ Eliminate code duplication: Detecting and removing duplicated code helps to redu
 Improve exception handling: Proper exception handling is critical for a robust application. Static analysis can identify areas where exceptions are not handled correctly, allowing developers to implement more robust error handling and recovery mechanisms.
 
 Enhance security: By detecting potential security vulnerabilities, such as SQL injection or cross-site scripting (XSS) attacks, developers can take the necessary steps to harden the application and protect sensitive data.
-
-## Testing
-> _This section will provide information about the testing performed
-> and the results of the testing._
 
 ### Acceptance Testing
 Acceptance testing is a crucial phase in the software development lifecycle, as it ensures that the developed system meets the specified requirements and satisfies the needs of the users. In the context of the Hotel Management System, acceptance testing involves verifying the functionality, usability, and reliability of the system from the perspective of the end-users, such as hotel staff and guests. This section will outline the process of acceptance testing for the Hotel Management System.
